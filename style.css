@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg950\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 body \{\
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;\
+    background-color: #f4f7f6;\
+    color: #333;\
+    margin: 0;\
+    line-height: 1.6;\
+\}\
+header \{\
+    background-color: #fff;\
+    padding: 1rem 2rem;\
+    border-bottom: 1px solid #ddd;\
+    display: flex;\
+    justify-content: space-between;\
+    align-items: center;\
+\}\
+h1 \{ color: #005a9c; \}\
+nav button \{\
+    background-color: #007bff;\
+    color: white;\
+    border: none;\
+    padding: 0.5rem 1rem;\
+    border-radius: 5px;\
+    cursor: pointer;\
+    margin-left: 10px;\
+    transition: background-color 0.3s;\
+\}\
+nav button:hover \{ background-color: #0056b3; \}\
+.api-key-container input \{\
+    border: 1px solid #ccc;\
+    padding: 0.5rem;\
+    border-radius: 5px;\
+\}\
+main \{ padding: 2rem; \}\
+.event-list \{\
+    display: grid;\
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\
+    gap: 20px;\
+\}\
+.card \{\
+    background: white;\
+    border-radius: 8px;\
+    padding: 20px;\
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);\
+    cursor: pointer;\
+    transition: transform 0.2s, box-shadow 0.2s;\
+\}\
+.card:hover \{\
+    transform: translateY(-5px);\
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);\
+\}\
+.card h4 \{ margin-top: 0; \}\
+.publish-date \{ font-size: 0.9em; color: #e74c3c; \}\
+.modal-hidden \{ display: none; \}\
+.modal \{\
+    position: fixed;\
+    z-index: 1000;\
+    left: 0;\
+    top: 0;\
+    width: 100%;\
+    height: 100%;\
+    overflow: auto;\
+    background-color: rgba(0,0,0,0.5);\
+\}\
+.modal-content \{\
+    background-color: #fefefe;\
+    margin: 10% auto;\
+    padding: 30px;\
+    border: 1px solid #888;\
+    width: 60%;\
+    max-width: 700px;\
+    border-radius: 8px;\
+    position: relative;\
+\}\
+.close-button \{\
+    color: #aaa;\
+    position: absolute;\
+    top: 15px;\
+    right: 25px;\
+    font-size: 28px;\
+    font-weight: bold;\
+    cursor: pointer;\
+    background: none;\
+    border: none;\
+\}\
+.action-button \{\
+    background-color: #28a745;\
+    color: white;\
+    padding: 10px 15px;\
+    border: none;\
+    border-radius: 5px;\
+    cursor: pointer;\
+    margin-top: 1rem;\
+\}\
+.action-button:hover \{ background-color: #218838; \}\
+.draft-output-hidden \{ display: none; \}\
+#draft-textarea \{\
+    width: 98%;\
+    margin-top: 1rem;\
+    padding: 10px;\
+    border: 1px solid #ccc;\
+    border-radius: 5px;\
+\}}
