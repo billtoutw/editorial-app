@@ -5,44 +5,82 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 body \{\
+\f0\fs24 \cf0 /* --- \uc0\u20840 \u22495 \u33287 \u22522 \u30990 \u35373 \u23450  --- */\
+body \{\
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;\
     background-color: #f4f7f6;\
     color: #333;\
     margin: 0;\
     line-height: 1.6;\
 \}\
+\
+/* --- \uc0\u38913 \u39318 \u33287 \u23566 \u35261 \u21015 \u20462 \u27491  --- */\
 header \{\
     background-color: #fff;\
     padding: 1rem 2rem;\
     border-bottom: 1px solid #ddd;\
+    /* \uc0\u21855 \u29992  Flexbox\u65292 \u35731 \u20839 \u37096 \u20803 \u32032 \u21487 \u20197 \u27700 \u24179 \u25490 \u21015  */\
     display: flex;\
+    /* \uc0\u23559 \u20841 \u31471 \u30340 \u20803 \u32032 \u25512 \u38283  (\u27161 \u38988 \u38752 \u24038 \u65292 \u23566 \u35261 \u21015 \u38752 \u21491 ) */\
     justify-content: space-between;\
+    /* \uc0\u22402 \u30452 \u32622 \u20013 \u23565 \u40778  */\
     align-items: center;\
+    flex-wrap: wrap; /* \uc0\u22312 \u23567 \u34722 \u24149 \u26178 \u20801 \u35377 \u25563 \u34892  */\
 \}\
-h1 \{ color: #005a9c; \}\
-nav button \{\
+\
+h1 \{\
+    color: #005a9c;\
+    margin: 0;\
+    font-size: 1.5em;\
+\}\
+\
+nav \{\
+    /* \uc0\u35731 \u23566 \u35261 \u21015 \u26412 \u36523 \u30340 \u20803 \u32032  (\u25353 \u37397 \u12289 \u36664 \u20837 \u26694 \u23481 \u22120 ) \u20063 \u27700 \u24179 \u25490 \u21015  */\
+    display: flex;\
+    align-items: center;\
+    gap: 15px; /* \uc0\u22312 \u20803 \u32032 \u20043 \u38291 \u22686 \u21152 \u38291 \u36317  */\
+    flex-wrap: wrap; /* \uc0\u22312 \u23567 \u34722 \u24149 \u26178 \u20801 \u35377 \u25563 \u34892  */\
+\}\
+\
+nav button, .action-button \{\
     background-color: #007bff;\
     color: white;\
     border: none;\
     padding: 0.5rem 1rem;\
     border-radius: 5px;\
     cursor: pointer;\
-    margin-left: 10px;\
     transition: background-color 0.3s;\
+    font-size: 1em;\
 \}\
-nav button:hover \{ background-color: #0056b3; \}\
+\
+nav button:hover, .action-button:hover \{\
+    background-color: #0056b3;\
+\}\
+\
+.api-key-container \{\
+    /* \uc0\u35731 \u36664 \u20837 \u26694 \u21644 \u20786 \u23384 \u25353 \u37397 \u27700 \u24179 \u25490 \u21015  */\
+    display: flex;\
+    align-items: center;\
+\}\
+\
 .api-key-container input \{\
     border: 1px solid #ccc;\
     padding: 0.5rem;\
     border-radius: 5px;\
+    margin-right: 5px; /* \uc0\u33287 \u25353 \u37397 \u38291 \u30041 \u40670 \u31354 \u38553  */\
 \}\
-main \{ padding: 2rem; \}\
+\
+/* --- \uc0\u20027 \u35201 \u20839 \u23481 \u33287 \u21345 \u29255 \u27171 \u24335  --- */\
+main \{\
+    padding: 2rem;\
+\}\
+\
 .event-list \{\
     display: grid;\
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\
     gap: 20px;\
 \}\
+\
 .card \{\
     background: white;\
     border-radius: 8px;\
@@ -50,15 +88,40 @@ main \{ padding: 2rem; \}\
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);\
     cursor: pointer;\
     transition: transform 0.2s, box-shadow 0.2s;\
+    display: flex;\
+    flex-direction: column;\
 \}\
+\
 .card:hover \{\
     transform: translateY(-5px);\
     box-shadow: 0 8px 12px rgba(0,0,0,0.15);\
 \}\
-.card h4 \{ margin-top: 0; \}\
-.publish-date \{ font-size: 0.9em; color: #e74c3c; \}\
-.modal-hidden \{ display: none; \}\
-.modal \{\
+\
+.card h4 \{\
+    margin-top: 0;\
+    margin-bottom: 10px;\
+    color: #005a9c;\
+    flex-grow: 1; /* \uc0\u35731 \u27161 \u38988 \u20308 \u28415 \u22810 \u39192 \u31354 \u38291 \u65292 \u20351 \u26085 \u26399 \u21644 \u30332 \u24067 \u26178 \u31243 \u23565 \u40778 \u24213 \u37096  */\
+\}\
+\
+.card p \{\
+    margin: 2px 0;\
+    font-size: 0.95em;\
+\}\
+\
+.publish-date \{\
+    font-size: 0.9em;\
+    color: #c0392b;\
+    font-weight: bold;\
+\}\
+\
+\
+/* --- \uc0\u24392 \u20986 \u35222 \u31383  (Modal) \u27171 \u24335  --- */\
+.modal-hidden \{\
+    display: none;\
+\}\
+\
+#event-modal \{\
     position: fixed;\
     z-index: 1000;\
     left: 0;\
@@ -67,43 +130,59 @@ main \{ padding: 2rem; \}\
     height: 100%;\
     overflow: auto;\
     background-color: rgba(0,0,0,0.5);\
+    display: flex;\
+    justify-content: center;\
+    align-items: center;\
 \}\
+\
 .modal-content \{\
     background-color: #fefefe;\
-    margin: 10% auto;\
     padding: 30px;\
     border: 1px solid #888;\
-    width: 60%;\
+    width: 90%;\
     max-width: 700px;\
     border-radius: 8px;\
     position: relative;\
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);\
 \}\
+\
 .close-button \{\
     color: #aaa;\
     position: absolute;\
-    top: 15px;\
-    right: 25px;\
+    top: 10px;\
+    right: 20px;\
     font-size: 28px;\
     font-weight: bold;\
     cursor: pointer;\
     background: none;\
     border: none;\
 \}\
-.action-button \{\
+\
+#generate-draft-btn \{\
     background-color: #28a745;\
-    color: white;\
-    padding: 10px 15px;\
-    border: none;\
-    border-radius: 5px;\
-    cursor: pointer;\
-    margin-top: 1rem;\
 \}\
-.action-button:hover \{ background-color: #218838; \}\
-.draft-output-hidden \{ display: none; \}\
+#generate-draft-btn:hover \{\
+    background-color: #218838;\
+\}\
+\
+.draft-output-hidden \{\
+    display: none;\
+\}\
+\
+#draft-output \{\
+    margin-top: 1.5rem;\
+\}\
+\
 #draft-textarea \{\
     width: 98%;\
     margin-top: 1rem;\
     padding: 10px;\
     border: 1px solid #ccc;\
     border-radius: 5px;\
+    font-size: 1em;\
+\}\
+\
+/* --- \uc0\u30070 \u24392 \u20986 \u35222 \u31383 \u38577 \u34255 \u26178 \u30340 \u27171 \u24335  --- */\
+#event-modal.modal-hidden \{\
+    display: none;\
 \}}
